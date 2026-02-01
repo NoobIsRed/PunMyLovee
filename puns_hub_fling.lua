@@ -952,11 +952,12 @@ local function RefreshList()
             mark.Visible = SelectedTargets[p.Name] ~= nil
             mark.Parent = check
             
+            -- MODIFIED: Display Name + Username
             local name = Instance.new("TextLabel")
             name.Size = UDim2.new(1, -32, 1, 0)
             name.Position = UDim2.new(0, 28, 0, 0)
             name.BackgroundTransparency = 1
-            name.Text = p.Name
+            name.Text = p.DisplayName .. " (@" .. p.Name .. ")"
             name.TextColor3 = THEME.Text
             name.TextSize = 11
             name.Font = Enum.Font.GothamBold
